@@ -31,11 +31,6 @@ You're responsible for following the law and platform rules when using this tool
 
 If you're not sure about your rights, please check local laws or ask a legal expert.
 
----
-
-*Based on spotDL's own disclaimer.*
-
----
 
 # Extending AzuraCast with Plugins
 
@@ -132,7 +127,6 @@ Below is a listing of the events that can be overridden by plugins:
   Write the per-station custom nginx configuration section.
 
 ### Radio Events
-
 - [`\App\Event\Radio\AnnotateNextSong`](https://github.com/AzuraCast/AzuraCast/blob/main/src/Event/Radio/AnnotateNextSong.php):
   Convert the metadata about a track into the "annotations" format used by Liquidsoap.
 - [`\App\Event\Radio\BuildQueue`](https://github.com/AzuraCast/AzuraCast/blob/main/src/Event/Radio/BuildQueue.php):

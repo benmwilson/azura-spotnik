@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Plugin\ExamplePlugin\Command;
+namespace Plugin\Spotnik\Command;
 
 use App\Console\Command\CommandAbstract;
 use App\Container\EntityManagerAwareTrait;
@@ -14,8 +14,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 #[AsCommand(
-    name: 'example:list-stations',
-    description: 'An example function to list stations in a table view.',
+    name: 'spotnik:list-stations',
+    description: 'List stations in a table view for Spotnik plugin.',
 )]
 final class ListStations extends CommandAbstract
 {
@@ -30,7 +30,7 @@ final class ListStations extends CommandAbstract
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
-        $io->title('Example Plugin: Stations');
+        $io->title('Spotnik Plugin: Stations');
 
         $headers = [
             'ID',

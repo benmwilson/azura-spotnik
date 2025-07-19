@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Plugin\ExamplePlugin\EventHandler;
+namespace Plugin\Spotnik\EventHandler;
 
 use App\Event;
 use NowPlaying\Result\Result;
