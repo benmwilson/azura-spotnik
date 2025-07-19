@@ -1,17 +1,14 @@
 {
-    "name": "azuracast/example-plugin",
-    "description": "An example AzuraCast plugin, demonstrating the capabilities and common use-cases of the plugin system.",
+    "name": "spotnik/azuracast-plugin",
+    "description": "Spotnik plugin for AzuraCast - Spotify track downloader using spotDL",
     "type": "azuracast-plugin",
-    "authors": [
-        {
-            "name": "Buster Neece",
-            "email": "buster@busterneece.com"
-        }
-    ],
+    "license": "Apache-2.0",
     "autoload": {
         "psr-4": {
-            "Plugin\\ExamplePlugin\\": "src"
+            "Plugin\\Spotnik\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "php": ">=8.1"
+    }
 }

@@ -1,0 +1,31 @@
+<?php $this->layout('minimal', ['title' => $title, 'page_class' => 'spotnik-spotdl-content']) ?>
+
+<section id="main">
+    <div class="container">
+        <div class="card mb-3" role="region">
+            <div class="card-header bg-primary-dark">
+                <h3 class="card-title"><?= $title ?></h3>
+            </div>
+
+            <div class="card-body">
+                <p><?= $message ?></p>
+                
+                <div class="alert alert-info">
+                    <h4>Coming Soon</h4>
+                    <p>This plugin will integrate spotDL to download Spotify tracks directly into your AzuraCast media library.</p>
+                    <ul>
+                        <li>Download tracks from Spotify playlists</li>
+                        <li>Download individual tracks</li>
+                        <li>Automatic metadata tagging</li>
+                        <li>Integration with AzuraCast media management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a href="javascript:history.back()"><i class="material-icons" aria-hidden="true">arrow_back</i></a>
+                <a href="<?=$router->named('home') ?>"><i class="material-icons" aria-hidden="true">home</i></a>
+            </div>
+        </div>
+    </div>
+</section> 

@@ -20,15 +20,19 @@ return static function (CallableEventDispatcherInterface $dispatcher) {
         $event->getView()->addFolder('spotnik', __DIR__.'/templates');
     });
 
-    // Add a new route handled exclusively by the plugin.
+    // Add routes handled exclusively by the plugin.
     $dispatcher->addListener(Event\BuildRoutes::class, function(Event\BuildRoutes $event) {
         $app = $event->getApp();
 
         $app->get('/spotnik', \Plugin\Spotnik\Controller\HelloWorld::class)
             ->setName('spotnik-plugin:index:index')
             ->add(\App\Middleware\EnableView::class);
+
+        $app->get('/spotnik/spotdl', \Plugin\Spotnik\Controller\SpotDLController::class)
+            ->setName('spotnik-plugin:spotdl:dashboard')
+            ->add(\App\Middleware\EnableView::class);
     });
 
-    // You can also add classes that implement the EventSubscriberInterface
+    // Add the event subscriber back now that we've simplified it
     $dispatcher->addSubscriber(new \Plugin\Spotnik\EventHandler\AllTheListeners);
 };

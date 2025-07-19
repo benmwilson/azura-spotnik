@@ -10,6 +10,33 @@
             <div class="card-body">
                 <p>Welcome to the Spotnik plugin for AzuraCast!</p>
                 <p>This plugin integrates spotDL functionality to download Spotify tracks.</p>
+                
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">SpotDL Integration</h5>
+                                <p class="card-text">Download Spotify tracks using spotDL</p>
+                                <a href="<?=$router->named('spotnik-plugin:spotdl:dashboard') ?>" class="btn btn-primary">
+                                    <i class="material-icons" aria-hidden="true">music_note</i>
+                                    SpotDL Dashboard
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Station Management</h5>
+                                <p class="card-text">List and manage your stations</p>
+                                <a href="#" class="btn btn-secondary" onclick="alert('Use: ./docker.sh cli spotnik:list-stations')">
+                                    <i class="material-icons" aria-hidden="true">list</i>
+                                    List Stations
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="card-footer">
