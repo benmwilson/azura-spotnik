@@ -1,0 +1,20 @@
+<?php $this->layout('minimal', ['title' => __('Hello World!'), 'page_class' => 'example-content']) ?>
+
+<section id="main">
+    <div class="container">
+        <div class="card mb-3" role="region">
+            <div class="card-header bg-primary-dark">
+                <h3 class="card-title">Hello World!</h3>
+            </div>
+
+            <div class="card-body">
+                This is an example page.
+            </div>
+
+            <div class="card-footer">
+                <a href="javascript:history.back()"><i class="material-icons" aria-hidden="true">arrow_back</i></a>
+                <a href="<?=$router->named('home') ?>"><i class="material-icons" aria-hidden="true">home</i></a>
+            </div>
+        </div>
+    </div>
+</section>
