@@ -1,0 +1,6 @@
+services:
+  web:
+    environment:
+      AZURACAST_PLUGIN_MODE: true
+    volumes:
+      - ./plugins/spotnik:/var/azuracast/www/plugins/spotnik 
